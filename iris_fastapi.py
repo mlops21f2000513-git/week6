@@ -18,6 +18,7 @@ class IrisInput(BaseModel):
     petal_length: float
     petal_width: float
 
+# Default endpoint
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the Iris Classifier API!"}
