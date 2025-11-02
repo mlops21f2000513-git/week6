@@ -32,7 +32,7 @@ jobs:
       - name: Get GKE credentials
         uses: google-github-actions/get-gke-credentials@v2
         with:
-          cluster_name: iris-cluster
+          cluster_name: demo-gke-iris-cluster
           location: ${{ secrets.GCP_REGION }}
 
       - name: Deploy to GKE
