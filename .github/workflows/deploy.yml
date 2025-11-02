@@ -37,5 +37,5 @@ jobs:
 
       - name: Deploy to GKE
         run: |
-          kubectl set image deployment/demo-iris-workload demo-iris-workload=${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/my-repo/iris-api:latest
+          kubectl set image deployment/demo-iris-workload iris-api-sha256-1=${{ secrets.GCP_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/my-repo/iris-api:latest
           kubectl rollout status deployment/demo-iris-workload
